@@ -1,0 +1,36 @@
+<header class="site-header">
+  <div class="container">
+    <h1><a href="index.html">Bihar Dream Bikes</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="login.html">Login</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+
+<div class="card">
+  <h2>Admin Dashboard (Demo)</h2>
+  <div style="color:red">All actions are simulated.</div>
+  <h3>Manage Bikes</h3>
+  <ul id="admin-bike-list"></ul>
+</div>
+<script>
+function showAdminBikes(){
+  const list = document.getElementById('admin-bike-list');
+  list.innerHTML='';
+  bikes.forEach(b=>{
+    const li=document.createElement('li');
+    li.textContent=`${b.name} (${b.model}) - ${b.status}`;
+    list.appendChild(li);
+  });
+}
+showAdminBikes();
+</script>
+</main>
+<footer class="site-footer">
+  <div class="container">© Bihar Dream Bikes Pvt Ltd</div>
+</footer>
+<script src="assets/script.js"></script>
